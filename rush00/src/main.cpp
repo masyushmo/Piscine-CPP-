@@ -6,7 +6,7 @@
 /*   By: mmasyush <mmasyush@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/06 02:36:51 by mmasyush          #+#    #+#             */
-/*   Updated: 2019/10/06 14:41:29 by mmasyush         ###   ########.fr       */
+/*   Updated: 2019/10/06 15:25:45 by mmasyush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int main(void)
 				break;
 		}
 		n++;
-		if (n >= 200)
+		if (n >= 150)
 		{
 			objs.add(new AEnemy);
 			n = 0;

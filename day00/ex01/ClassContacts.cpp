@@ -12,6 +12,7 @@
 
 #include "ClassContacts.hpp"
 
+
 Contact::Contact(void)
 {
     return;

@@ -5,43 +5,33 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mmasyush <mmasyush@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/10/06 02:42:13 by mmasyush          #+#    #+#              #
-#    Updated: 2019/10/06 08:33:42 by mmasyush         ###   ########.fr        #
+#    Created: 2019/10/09 19:21:20 by mmasyush          #+#    #+#              #
+#    Updated: 2019/10/10 20:30:49 by mmasyush         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = clang++
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Werror -Wextra
 
-NAME = ft_retro
+NAME = identify
 
-SRC = AEnemys.cpp AFly.cpp AProjs.cpp AWeapon.cpp Objects.cpp Game.cpp Player.cpp main.cpp
+SRC = main.cpp Base.cpp A.cpp B.cpp C.cpp
 
-SRC_DIR = ./src/
+OBJ = main.o Base.o A.o B.o C.o
 
-OBJ_DIR = ./obj/
-
-INCLUDES = -lncurses
-
-OBJ = $(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
-
-all: obj_dir $(NAME)
-	@echo "\033[22;32mCOMPILATED! \033[22;35mヽ(•‿•)ノ"
-
-obj_dir:
-	mkdir -p $(OBJ_DIR)
+all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(INCLUDES) $(OBJ) -o $(NAME)c
+		$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-$(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
-	$(CC) $(FLAGS) -o $@ -c $<
+%.o: %.cpp
+		$(CC) $(FLAGS) -o $@ -c $<
 
 clean:
-	rm -rf $(OBJ_DIR)
+		@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+		@rm -f $(NAME)
 
 re: fclean all

@@ -13,10 +13,7 @@
 #ifndef CLASS_CONTACTS_H
 # define CLASS_CONTACTS_H
 
-#include <iostream>
-#include <iomanip>
 #include <string>
-#include <cstdlib>
 
 # define MAX_CONT 8
 # define ERROR "\033[0;31mERROR: \033[0;37m" 

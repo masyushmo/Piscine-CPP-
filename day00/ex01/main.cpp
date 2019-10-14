@@ -11,6 +11,9 @@
 // ************************************************************************** //
 
 #include "ClassContacts.hpp"
+#include <iostream>
+#include <iomanip>
+#include <string>
 
 Contact add_contact()
 {
@@ -52,11 +55,6 @@ Contact add_contact()
     temp.in_secret(buff);
     std::cout << "\033[0;32m\\(^o^)/\033[0;37mThanks, we are done here!!!\033[0;32m\\(^o^)/\033[0;37m\n";
     return(temp);
-}
-
-void contact_info()
-{
-
 }
 
 void get_contacts(Contact *list, int num)
